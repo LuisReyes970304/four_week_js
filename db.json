@@ -1,0 +1,9 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "yuca",
+      "product_price": 700
+    }
+  ]
+}

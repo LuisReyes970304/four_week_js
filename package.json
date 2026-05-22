@@ -1,0 +1,21 @@
+{
+  "name": "four_week_js",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisReyes970304/four_week_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisReyes970304/four_week_js/issues"
+  },
+  "homepage": "https://github.com/LuisReyes970304/four_week_js#readme",
+  "description": ""
+}
