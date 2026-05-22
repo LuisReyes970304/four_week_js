@@ -1,9 +1,29 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "product_name": "yuca",
       "product_price": 700
+    },
+    {
+      "id": 12,
+      "product_name": "Mango",
+      "product_price": 2000
+    },
+    {
+      "id": "0b7d",
+      "product_name": "sdsadas",
+      "product_price": 1111
+    },
+    {
+      "id": "ed21",
+      "product_name": "Mango",
+      "product_price": 2500
+    },
+    {
+      "id": "30fe",
+      "product_name": "Pera",
+      "product_price": 1500
     }
   ]
 }

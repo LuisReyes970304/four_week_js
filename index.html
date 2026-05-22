@@ -8,15 +8,21 @@
 </head>
 <body>
     <main>
-        <fieldset>
-            <legend></legend>
-            <form action="/products" class="productForm">
-                <input type="text" class="productName" placeholder="Add product name">
-                <input type="number" class="productPrice" placeholder="Add product price" step="any">
-                <input type="number" class="productId" placeholder="Add product id">
-                <input type="submit">
-            </form>
-        </fieldset>
+        <aside>
+            <fieldset class="addProduct">
+                <legend>Product</legend>
+                <form action="/products" class="productForm">
+                    <input type="text" class="productName" placeholder="Add product name">
+                    <input type="number" class="productPrice" placeholder="Add product price" step="any">
+                    <input type="submit">
+                </form>
+                <div class="messageAlert"></div>
+            </fieldset>
+        </aside>
+        <figure class="productInformation">
+            <h2>Product List</h2>
+            <ul class="productList"></ul>
+        </figure>
     </main>
     <script type="module" src="app.js"></script>
 </body>
