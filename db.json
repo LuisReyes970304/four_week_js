@@ -1,29 +1,29 @@
 {
   "products": [
     {
-      "id": "1",
-      "product_name": "yuca",
-      "product_price": 700
-    },
-    {
-      "id": 12,
-      "product_name": "Mango",
-      "product_price": 2000
-    },
-    {
-      "id": "0b7d",
-      "product_name": "sdsadas",
-      "product_price": 1111
-    },
-    {
-      "id": "ed21",
-      "product_name": "Mango",
-      "product_price": 2500
-    },
-    {
-      "id": "30fe",
       "product_name": "Pera",
-      "product_price": 1500
+      "product_price": 2000,
+      "id": 1
+    },
+    {
+      "product_name": "arroz",
+      "product_price": 2000,
+      "id": 2
+    },
+    {
+      "product_name": "maiz",
+      "product_price": 5000,
+      "id": 3
+    },
+    {
+      "product_name": "pescado",
+      "product_price": 4000,
+      "id": 4
+    },
+    {
+      "product_name": "Azucar",
+      "product_price": 1000,
+      "id": 5
     }
   ]
 }
