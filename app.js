@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:3000/products"
+const URL_API = "http://localhost:3001/products"
 
 const productForm = document.querySelector(".productForm");
 const productName = productForm.querySelector(".productName");
@@ -6,8 +6,12 @@ const productPrice = productForm.querySelector(".productPrice");
 const messageAlert = document.querySelector(".messageAlert");
 const productList = document.querySelector(".productList");
 
+const deleteForm = document.querySelector(".deleteForm");
+const deleteId = deleteForm.querySelector(".deleteId");
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    renderData(URL_API, productList);
+    getData(URL_API, productList);
 });
 
 productForm.addEventListener("submit", (e) => {
@@ -15,15 +19,20 @@ productForm.addEventListener("submit", (e) => {
     const dataName = productName.value.trim();
     const dataPrice = parseFloat(productPrice.value.trim());
     if (!dataName || !dataPrice ){
-        alert("Todos los campos son obligatorios")
+        alert("Fill out all the filds")
         return
     }
     productName.value = "";
     productPrice.value = "";
-    setServerData(URL_API, dataName, dataPrice);
+    postServerData(URL_API, dataName, dataPrice);
 });
 
-async function renderData(url, list){
+deleteForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    deleteProduct();
+})
+
+async function getData(url, list){
     const response = await fetch(url);
     const data = await response.json();
 
@@ -41,7 +50,7 @@ async function renderData(url, list){
 }
 
 
-async function setServerData(url, productName, productPrice){
+async function postServerData(url, productName, productPrice){
     const newProduct = {product_name: productName, product_price: productPrice};
 
     try {
@@ -52,22 +61,35 @@ async function setServerData(url, productName, productPrice){
         });
         return await fetchData.json();
     } catch (error) {
-        console.error("error " + error)
+        console.error("Error found: " + error)
     }
 }
 
-async function deleteProduct(url, name){
-    const response = fetch(url)
-    const data = await response.json();
+async function deleteProduct() {
+    let id = deleteId.value.trim(); 
+    deleteId.value = "";
+    if (!id) return alert("Write the product to delete...");
+
     try {
-        for(const product of data){
-            if(name === product.product_name){
-                const response = await fetch(url/name, {
-                    method: "DELETE"
-                });
-            }
-        } 
-    }catch(error) {
-        console.error("Error foud: " + error)
+        const response = await fetch(`${URL_API}/${id}`, {
+            method: "DELETE"
+        });
+
+        if (response.ok) {
+            console.log("Product deleted");
+            deleteName.value = "";
+        } else {
+            console.error("Id not found");
+        }
+    } catch (error) {
+        console.error("Error deleting: ", error);
+    }
+}
+
+async function updateProduct(){
+    try{
+        const response = await fetch()
+    } catch (error) {
+        console.error("Error updating: ", error)
     }
 }

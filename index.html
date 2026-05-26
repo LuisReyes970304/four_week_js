@@ -11,10 +11,19 @@
     <main>
         <aside>
             <fieldset class="addProduct">
-                <legend>Product</legend>
+                <legend>Add Product</legend>
                 <form action="/products" class="productForm">
-                    <input type="text" class="productName" placeholder="Add product name">
-                    <input type="number" class="productPrice" placeholder="Add product price" step="any">
+                    <input type="text" class="productName" placeholder="Add product name...">
+                    <input type="number" class="productPrice" placeholder="Add product price..." step="any">
+                    <input type="submit">
+                </form>
+                <div class="messageAlert"></div>
+            </fieldset>
+
+            <fieldset class="addProduct">
+                <legend>Delete Product</legend>
+                <form action="/products" class="deleteForm">
+                    <input type="text" class="deleteId" placeholder="Product to delete...">
                     <input type="submit">
                 </form>
                 <div class="messageAlert"></div>
