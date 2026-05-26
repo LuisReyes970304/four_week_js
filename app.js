@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:3001/products"
+const URL_API = "http://localhost:3000/products"
 
 const productForm = document.querySelector(".productForm");
 const productName = productForm.querySelector(".productName");
