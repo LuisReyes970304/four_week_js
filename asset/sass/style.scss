@@ -1,0 +1,108 @@
+// --- VARIABLES DE COLORES ---
+$font-stack: Arial, sans-serif;
+$max-width: 600px;
+
+// Colores base y botones
+$color-primary: #007BFF;
+$color-primary-hover: #0056b3;
+$color-danger: #DC3545;
+$color-danger-hover: #bd2130;
+$color-warning: #FFC107;
+
+// Colores de estados/mensajes
+$color-success-bg: #D4EDDA;
+$color-success-text: #155724;
+$color-error-bg: #F8D7DA;
+$color-error-text: #721C24;
+
+$color-border: #ccc;
+
+
+// --- ESTILOS GENERALES ---
+body {
+    font-family: $font-stack;
+    max-width: $max-width;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+
+// --- FORMULARIO Y ENTRADAS ---
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    font-size: 1rem;
+}
+
+
+// --- BOTONES ---
+button {
+    padding: 10px;
+    background-color: $color-primary;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-primary-hover;
+    }
+
+    // Modificadores de botones mediante nesting
+    &.btn-delete {
+        background-color: $color-danger;
+        margin-left: 10px;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: $color-danger-hover;
+        }
+    }
+
+    &.btn-edit {
+        background-color: $color-warning;
+        color: black;
+        margin-left: 10px;
+        padding: 5px 10px;
+    }
+}
+
+
+// --- CONTENEDOR DE MENSAJES Y ESTADOS ---
+#messageContainer {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+    border-radius: 4px;
+
+    // Clases de estado combinadas o adyacentes
+    &.success {
+        background-color: $color-success-bg;
+        color: $color-success-text;
+    }
+
+    &.error {
+        background-color: $color-error-bg;
+        color: $color-error-text;
+    }
+}
+
+
+// --- LISTAS DINÁMICAS (DOM) ---
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid $color-border;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

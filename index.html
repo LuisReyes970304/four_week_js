@@ -8,32 +8,24 @@
     <link rel="icon" href="type:,">
 </head>
 <body>
-    <main>
-        <aside>
-            <fieldset class="addProduct">
-                <legend>Add Product</legend>
-                <form action="/products" class="productForm">
-                    <input type="text" class="productName" placeholder="Add product name...">
-                    <input type="number" class="productPrice" placeholder="Add product price..." step="any">
-                    <input type="submit">
-                </form>
-                <div class="messageAlert"></div>
-            </fieldset>
+<body>
 
-            <fieldset class="addProduct">
-                <legend>Delete Product</legend>
-                <form action="/products" class="deleteForm">
-                    <input type="text" class="deleteId" placeholder="Product to delete...">
-                    <input type="submit">
-                </form>
-                <div class="messageAlert"></div>
-            </fieldset>
-        </aside>
-        <figure class="productInformation">
-            <h2>Product List</h2>
-            <ul class="productList"></ul>
-        </figure>
-    </main>
-    <script type="module" src="app.js"></script>
+    <h1>Gestor de Productos</h1>
+
+    <div id="messageContainer"></div>
+
+    <form id="productForm">
+        <input type="hidden" id="productId"> <input type="text" id="productName" placeholder="Nombre del producto">
+        <input type="number" id="productPrice" placeholder="Precio ($)">
+        <button type="submit" id="formSubmitBtn">Agregar Producto</button>
+    </form>
+
+    <button id="syncApiBtn" style="background-color: #28a745; width: 100%; margin-bottom: 20px;">
+        Sincronizar/Cargar desde API (GET)
+    </button>
+
+    <h2>Lista de Productos</h2>
+    <ul id="productList"></ul>
+    <script type="module" src="asset/js/app.js"></script>
 </body>
 </html>

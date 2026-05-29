@@ -1,19 +1,9 @@
 {
   "products": [
     {
-      "id": "019f",
-      "product_name": "Berengena",
-      "product_price": 8000
-    },
-    {
-      "id": "fe4a",
-      "product_name": "Maracuya",
-      "product_price": 3500
-    },
-    {
-      "id": "4f97",
-      "product_name": "Maracuya",
-      "product_price": 4500
+      "name": "azucar",
+      "price": "2000.00",
+      "id": 1
     }
   ]
 }
